@@ -1,0 +1,2 @@
+# PCBuildingSimilatorVR
+Курсовой-дипломный проект
