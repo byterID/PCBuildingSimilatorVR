@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _learningTab;
+    [SerializeField] private GameObject _practicingTab;
+    [SerializeField] private GameObject _examTab;
+    [SerializeField] private GameObject _settingsTab;
 
-    // Update is called once per frame
-    void Update()
+
+    public void ActiveLearning()
     {
-        
+        _learningTab.SetActive(true);
+        _practicingTab.SetActive(false);
+        _examTab.SetActive(false);
+        _settingsTab.SetActive(false);
+    }
+    public void ActivePractice()
+    {
+        _learningTab.SetActive(false);
+        _practicingTab.SetActive(true);
+        _examTab.SetActive(false);
+        _settingsTab.SetActive(false);
+    }
+    public void ActiveExam()
+    {
+        _learningTab.SetActive(false);
+        _practicingTab.SetActive(false);
+        _examTab.SetActive(true);
+        _settingsTab.SetActive(false);
+    }
+    public void ActiveSettings()
+    {
+        _learningTab.SetActive(false);
+        _practicingTab.SetActive(false);
+        _examTab.SetActive(false);
+        _settingsTab.SetActive(true);
     }
 }
