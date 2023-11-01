@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectRevial : MonoBehaviour
 {
-    [SerializeField] private GameObject _socket;
+    [SerializeField] private GameObject[] _socket;
     [SerializeField] private GameObject _item;
 
     private void Start()
@@ -14,6 +12,9 @@ public class ObjectRevial : MonoBehaviour
 
     public void ActivateSocket()
     {
-        _socket.SetActive(true);
+        for (int i = 0; i < _socket.Length; i++)
+        {
+            _socket[i].SetActive(true);
+        }
     }
 }
