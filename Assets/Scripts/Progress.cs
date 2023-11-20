@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Progress : MonoBehaviour
 {
     //чтоб рестартать
     [SerializeField] Transform _instantiateTransform;
-    [SerializeField] private GameObject _pcLearningPrefab;
+    [SerializeField] private GameObject[] _computerParts;
 
     //Железки
     [SerializeField] private GameObject[] _ram;
@@ -98,6 +99,6 @@ public class Progress : MonoBehaviour
 
     public void Restart()
     {
-        _progress = 0;
+        SceneManager.LoadScene(0);
     }
 }
