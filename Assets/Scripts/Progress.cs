@@ -1,29 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
 
 public class Progress : MonoBehaviour
 {
+    //чтоб рестартать
+    [SerializeField] Transform _instantiateTransform;
+    [SerializeField] private GameObject _pcLearningPrefab;
+
+    //Железки
+    [SerializeField] private GameObject[] _ram;
+
+    //Сокеты для железяк
+    [SerializeField] private GameObject _coolerSocket, _motherboardSocket, _gpuSocket, _diskSocket, _powerSuplySocket;
+    [SerializeField] private GameObject[] _ramSocket;
+
+    //Для оперативы
+    public int _ramCount = 0;
+
+    //Для телека
     [SerializeField] private GameObject _taskPrefab;
-    [SerializeField] private GameObject[] _socketPlaces;
     [SerializeField] private string[] _stringList;
     [SerializeField] private Transform _content;
-    [SerializeField] private List<GameObject> _tasksList = new List<GameObject>();
-
-    private TMP_Text _text;
-    private Image _image;
-
-    public int _progress = 0;
+    private List<GameObject> _tasksList = new List<GameObject>();
+    private int _progress = 0;
     [SerializeField] private Color _color, _activeColor;
+
     private void Start()
     {
-        _text = GetComponent<TMP_Text>();
-        _image = GetComponent<Image>();
-
         for (int i = 0; i < _stringList.Length; i++)
         {
             InstantiateTasks(i);
@@ -31,6 +36,10 @@ public class Progress : MonoBehaviour
         _tasksList[_progress].GetComponent<Image>().color = _activeColor;
     }
 
+    private void Update()
+    {
+        RevialCoolerSocket();
+    }
 
     private void InstantiateTasks(int i)
     {
@@ -41,10 +50,54 @@ public class Progress : MonoBehaviour
         _tasksList.Add(task);
     }
 
-    public void ChangeTask()
+    private void ChangeTask()
     {
         _tasksList[_progress].GetComponent<Image>().color = _color;
         _progress++;
         _tasksList[_progress].GetComponent<Image>().color = _activeColor;
+    }
+    
+    public void RevialRamSocket()
+    {
+        for (int i = 0; i < _ramSocket.Length; i++)
+        {
+            _ramSocket[i].SetActive(true);
+        }
+        ChangeTask();
+    }
+    private void RevialCoolerSocket()
+    {
+        if (_ramCount == 4)
+        {
+            ChangeTask();
+            _coolerSocket.SetActive(true);
+            _ramCount = 0;
+        }
+    }
+    public void RevialPowerSuplySocket()
+    {
+        _powerSuplySocket.SetActive(true);
+        ChangeTask();
+    }
+    public void RevialDiskSocket()
+    {
+        _diskSocket.SetActive(true);
+        ChangeTask();
+    }
+    public void RevialMotherboardSocket()
+    {
+        _motherboardSocket.SetActive(true);
+        ChangeTask();
+    }
+
+    public void RevialGPUSocket()
+    {
+        _gpuSocket.SetActive(true);
+        ChangeTask();
+    }
+
+    public void Restart()
+    {
+        _progress = 0;
     }
 }

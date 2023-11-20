@@ -9,13 +9,12 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject _examTab;
     [SerializeField] private GameObject _settingsTab;
 
-
     public void ActiveLearning()
     {
         _learningTab.SetActive(true);
         _practicingTab.SetActive(false);
         _examTab.SetActive(false);
-        _settingsTab.SetActive(false);
+        _settingsTab.SetActive(false);  
     }
     public void ActivePractice()
     {
