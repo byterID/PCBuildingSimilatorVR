@@ -423,8 +423,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046153206}
-        m_TargetAssemblyTypeName: Exam, Assembly-CSharp
+      - m_Target: {fileID: 1414427828}
+        m_TargetAssemblyTypeName: Registration, Assembly-CSharp
         m_MethodName: LoadMain
         m_Mode: 1
         m_Arguments:
@@ -850,8 +850,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2046153206}
-        m_TargetAssemblyTypeName: Exam, Assembly-CSharp
+      - m_Target: {fileID: 1414427828}
+        m_TargetAssemblyTypeName: Registration, Assembly-CSharp
         m_MethodName: SaveName
         m_Mode: 1
         m_Arguments:
@@ -1400,6 +1400,7 @@ GameObject:
   - component: {fileID: 1414427827}
   - component: {fileID: 1414427826}
   - component: {fileID: 1414427825}
+  - component: {fileID: 1414427828}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1481,6 +1482,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -89.999, z: 0}
+--- !u!114 &1414427828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414427824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23675c210f855764ab9975c4062c3f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _inputField: {fileID: 481321403}
+  _text: {fileID: 1161473507}
 --- !u!1 &1444960198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2126,6 @@ GameObject:
   - component: {fileID: 2046153205}
   - component: {fileID: 2046153204}
   - component: {fileID: 2046153203}
-  - component: {fileID: 2046153206}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2201,25 +2216,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &2046153206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046153201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b193ec32f324b04598a65568047551e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: 
-  _inputField: {fileID: 481321403}
-  _nameText: {fileID: 0}
-  _time: 0
-  _bestTime: 0
-  _examStarted: 0
-  _timerText: {fileID: 0}
 --- !u!1 &2094295230
 GameObject:
   m_ObjectHideFlags: 0

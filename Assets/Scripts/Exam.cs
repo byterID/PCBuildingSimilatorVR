@@ -5,10 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Exam : MonoBehaviour
+public class Exam : Registration
 {
-    public string _name;
-    [SerializeField] private TMP_InputField _inputField;
+
     [SerializeField] private TMP_Text _nameText;
 
     [SerializeField] private float _time;
@@ -18,10 +17,16 @@ public class Exam : MonoBehaviour
 
     private void Start()
     {
-        _name = _inputField.text;
+        if (PlayerPrefs.HasKey("username"))
+        {
+            _nameText.text = PlayerPrefs.GetString("username");
+            Debug.LogError("There is save data!");
+        }
+        else
+            Debug.LogError("There is no save data!");
+
         _timerText.text = _time.ToString();
-        _nameText.text = _name;
-        _name = PlayerPrefs.GetString("username");
+        //_nameText.text = _name;
     }
 
     private void Update()
@@ -34,15 +39,5 @@ public class Exam : MonoBehaviour
         if (_examStarted)
             _time += Time.deltaTime;
         _examStarted = true;
-    }
-
-    public void SaveName()
-    {
-        PlayerPrefs.SetString("username", _name);
-    }
-
-    public void LoadMain()
-    {
-        SceneManager.LoadScene(0);
     }
 }
