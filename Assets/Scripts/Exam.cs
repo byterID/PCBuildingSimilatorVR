@@ -26,7 +26,7 @@ public class Exam : Registration
             Debug.LogError("There is no save data!");
 
         _timerText.text = _time.ToString();
-        //_nameText.text = _name;
+        _name = PlayerPrefs.GetString("username");
     }
 
     private void Update()

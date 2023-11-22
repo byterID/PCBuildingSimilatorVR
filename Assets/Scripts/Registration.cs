@@ -10,9 +10,10 @@ public class Registration : MonoBehaviour
 
     public void SaveName()
     {
-        PlayerPrefs.SetString("username", _name);
         _name = _inputField.text;
         _text.text = _name;
+        PlayerPrefs.SetString("username", _name);
+        PlayerPrefs.Save();
     }
     public void LoadMain()
     {
