@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6907368605964255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4547179070657709295}
+  m_Layer: 0
+  m_Name: GPU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4547179070657709295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907368605964255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.4444, y: 0.9016, z: 1.5518}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6289221288338061515}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1164643942427173131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6289221288338061515}
+  - component: {fileID: 8676672067292396473}
+  - component: {fileID: 6539539969426540487}
+  m_Layer: 0
+  m_Name: MARS 760
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6289221288338061515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164643942427173131}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.044404253, y: -0.020218022, z: -0.002792595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4547179070657709295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8676672067292396473
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164643942427173131}
+  m_Mesh: {fileID: -3114165535626588834, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+--- !u!23 &6539539969426540487
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164643942427173131}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -3661639628750336703, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 3658102842295812727, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -3692016953361933836, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -8499701361930146817, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -1961533206551502753, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 1985576716318950847, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -4345578164894154307, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 7391655376324280130, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -2735750678431858057, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -3230572722097275338, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -1407151099726712887, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 5629084884208175553, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -7540856775010145387, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 6733286554136709258, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 8036903786886356767, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 603552378812188647, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -5077611411732380885, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -3945137701929649643, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 3937531744193098810, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 7579995365768651513, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 3848757458975538128, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -6776369138209129295, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -2517951894042516775, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 3459759165164385572, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 8290782892783832528, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -918873140127888495, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -3414371655771042559, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -5847147333916659470, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 1107038619845532692, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: -3144184669361809405, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 824015559753126921, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 4020331273038672487, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 3638947566262994944, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  - {fileID: 7887228937920767245, guid: 7867fc98668670f4e8fff37bd2be14ee, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
