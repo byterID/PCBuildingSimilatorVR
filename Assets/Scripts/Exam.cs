@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Exam : MonoBehaviour
 {
@@ -12,7 +8,7 @@ public class Exam : MonoBehaviour
 
     [SerializeField] private float _time;
     [SerializeField] private float _bestTime;
-    [SerializeField] private bool _examStarted = false;
+    private bool _examStarted = false;
     [SerializeField] private TMP_Text _timerText;
 
     private void Start()
@@ -25,18 +21,23 @@ public class Exam : MonoBehaviour
         else
             Debug.LogError("There is no save data!");
 
-        _timerText.text = _time.ToString();
+        
     }
 
     private void Update()
     {
-        StartTimer();
+        TimerCount();
+        _timerText.text = _time.ToString("0.0") + " сек";
     }
 
-    private void StartTimer()
+    private void TimerCount()
     {
         if (_examStarted)
             _time += Time.deltaTime;
+    }
+
+    public void StartExam()
+    {
         _examStarted = true;
     }
 }
