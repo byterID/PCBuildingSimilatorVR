@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Exam : Registration
+public class Exam : MonoBehaviour
 {
 
     [SerializeField] private TMP_Text _nameText;
@@ -20,13 +20,12 @@ public class Exam : Registration
         if (PlayerPrefs.HasKey("username"))
         {
             _nameText.text = PlayerPrefs.GetString("username");
-            Debug.LogError("There is save data!");
+            Debug.Log("There is save data!");
         }
         else
             Debug.LogError("There is no save data!");
 
         _timerText.text = _time.ToString();
-        _name = PlayerPrefs.GetString("username");
     }
 
     private void Update()
