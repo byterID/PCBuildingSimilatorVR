@@ -1,6 +1,5 @@
 {
     "name": "SteamVR",
-    "rootNamespace": "",
     "references": [
         "SteamVR_Windows_EditorHelper",
         "Unity.XR.OpenVR",
@@ -8,8 +7,7 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": [
-        "Android",
-        "WindowsStandalone64"
+        "Android"
     ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
