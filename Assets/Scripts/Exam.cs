@@ -10,18 +10,16 @@ public class Exam : MonoBehaviour
     [SerializeField] private float _bestTime;
     private bool _examStarted = false;
     [SerializeField] private TMP_Text _timerText;
+    [SerializeField] private TMP_Text _bestTimerText;
+
+    [SerializeField] private GameObject _endExamPanel;
 
     private void Start()
     {
         if (PlayerPrefs.HasKey("username"))
         {
             _nameText.text = PlayerPrefs.GetString("username");
-            Debug.Log("There is save data!");
         }
-        else
-            Debug.LogError("There is no save data!");
-
-        
     }
 
     private void Update()
@@ -39,5 +37,12 @@ public class Exam : MonoBehaviour
     public void StartExam()
     {
         _examStarted = true;
+    }
+
+    public void ExamEnd()
+    {   
+        _examStarted = false;
+        _bestTimerText.text = _time.ToString();
+
     }
 }
