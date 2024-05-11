@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class Exam : MonoBehaviour
+public class Exam : MonoBehaviour//ебать че это за хуйня
 {
-
+    //переписульки
     [SerializeField] private TMP_Text _nameText;
 
     [SerializeField] private float _time;

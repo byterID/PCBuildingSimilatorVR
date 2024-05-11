@@ -4,15 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class Registration : MonoBehaviour
 {
-    public string _name;
+    public string Name;
     [SerializeField] private TMP_InputField _inputField;
     [SerializeField] private TMP_Text _text;
 
     public void SaveName()
     {
-        _name = _inputField.text;
-        _text.text = _name;
-        PlayerPrefs.SetString("username", _name);
+        Name = _inputField.text;
+        _text.text = Name;
+        PlayerPrefs.SetString("username", Name);
         PlayerPrefs.Save();
     }
     public void LoadMain()

@@ -4,11 +4,9 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Progress : MonoBehaviour
+public class Progress : MonoBehaviour//год обджект хули
 {
-    //чтоб рестартать
-    [SerializeField] Transform _instantiateTransform;
-    [SerializeField] private GameObject[] _computerParts;
+    public static Progress Instance;
 
     //Железки
     [SerializeField] private GameObject[] _ram;
@@ -21,12 +19,18 @@ public class Progress : MonoBehaviour
     public int _ramCount = 0;
 
     //Для телека
-    [SerializeField] private GameObject _taskPrefab;
     [SerializeField] private string[] _stringList;
+    [SerializeField] private GameObject _taskPrefab;
+    [SerializeField] private Color _color, _activeColor;
     [SerializeField] private Transform _content;
     private List<GameObject> _tasksList = new List<GameObject>();
-    private int _progress = 0;
-    [SerializeField] private Color _color, _activeColor;
+    private int _progressIndex = 0;
+
+    private void Awake()
+    {
+        if(Instance == null)
+            Instance = this;
+    }
 
     private void Start()
     {
@@ -34,12 +38,7 @@ public class Progress : MonoBehaviour
         {
             InstantiateTasks(i);
         }
-        _tasksList[_progress].GetComponent<Image>().color = _activeColor;
-    }
-
-    private void Update()
-    {
-        RevialCoolerSocket();
+        _tasksList[_progressIndex].GetComponent<Image>().color = _activeColor;
     }
 
     private void InstantiateTasks(int i)
@@ -53,9 +52,9 @@ public class Progress : MonoBehaviour
 
     private void ChangeTask()
     {
-        _tasksList[_progress].GetComponent<Image>().color = _color;
-        _progress++;
-        _tasksList[_progress].GetComponent<Image>().color = _activeColor;
+        _tasksList[_progressIndex].GetComponent<Image>().color = _color;
+        _progressIndex++;
+        _tasksList[_progressIndex].GetComponent<Image>().color = _activeColor;
     }
     
     public void RevialRamSocket()
@@ -66,14 +65,11 @@ public class Progress : MonoBehaviour
         }
         ChangeTask();
     }
-    private void RevialCoolerSocket()
+    public void RevialCoolerSocket()
     {
-        if (_ramCount == 4)
-        {
-            ChangeTask();
-            _coolerSocket.SetActive(true);
-            _ramCount = 0;
-        }
+        ChangeTask();
+        _coolerSocket.SetActive(true);
+        _ramCount = 0;
     }
     public void RevialPowerSuplySocket()
     {
